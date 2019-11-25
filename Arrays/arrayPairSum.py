@@ -17,24 +17,26 @@ def pairSum(arr,n, sum):
 				count += 1
 	return count
 	
-# def thePairs(arr,n, sum): 
-# 	empty_list = []
-# 	for i in range(0,n):
-# 		for j in range(i+1,n):
-# 			if arr[i] + arr[j] == sum:
-# 		 		empty_list.append((arr[i], arr[j]))
+def thePairs(arr,n, sum): 
+	empty_list = []
+	for i in range(0,n):
+		for j in range(i+1,n):
+			if arr[i] + arr[j] == sum:
+		 		empty_list.append((arr[i], arr[j]))
 		        
-# 	return ("The number of pairs is: ",empty_list)
+	return ("The number of pairs is: ",empty_list)
 
 
-def thePairs(arr,n, sum):
+# def thePairs(arr,n, sum):
 	
 
-	diff_pairs = [(arr[i], sum-arr[i]) for i in range(0, n) if sum-arr[i] in arr]
-	diff_pairs = list(dict.fromkeys(diff_pairs))
+# 	diff_pairs = [(arr[i], sum-arr[i]) for i in range(0, n) if sum-arr[i] in arr]
+# 	diff_pairs = list(dict.fromkeys(diff_pairs))
 	
 
-	return diff_pairs
+# 	return diff_pairs
+
+# There's a problem with this sha, it is not accurate. Need to look into tweaking this
 
 
 
