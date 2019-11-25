@@ -18,20 +18,25 @@ def pairSum(arr,n, sum):
 	return count
 	
 # def thePairs(arr,n, sum): 
-# 	count = 0
+# 	empty_list = []
 # 	for i in range(0,n):
 # 		for j in range(i+1,n):
 # 			if arr[i] + arr[j] == sum:
-# 		 		count +=1
-# 		 		print ([(arr[i], arr[j])])
+# 		 		empty_list.append((arr[i], arr[j]))
 		        
-# 	return ("The number of pairs is: ",count)
+# 	return ("The number of pairs is: ",empty_list)
 
 
 def thePairs(arr,n, sum):
-	diff_pairs = [(arr[i], sum-arr[i]) for i in range(0, n) if sum-arr[i] in arr]
+	
 
-	return ("The pairs are: ", diff_pairs) 
+	diff_pairs = [(arr[i], sum-arr[i]) for i in range(0, n) if sum-arr[i] in arr]
+	diff_pairs = list(dict.fromkeys(diff_pairs))
+	
+
+	return diff_pairs
+
+
 
 
 
