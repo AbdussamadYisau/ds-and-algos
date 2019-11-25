@@ -35,4 +35,8 @@ def addOne(test_array) :
 
 print ("This is the new array:", addOne([9,9,9,9]))
 
+print ("This is the new array:", addOne([1,2,3]))
+
+print ("This is the new array:", addOne([1,2,9,9]))
+
 
