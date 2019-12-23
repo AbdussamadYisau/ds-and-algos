@@ -62,10 +62,66 @@ class singleLinkedList:
 			data = int(input("Enter the element to be inserted: "))
 			self.insertAtEnd(data)
 
+	def insertAfter(self,data,x):
+		p = self.start
+
+		while p is not None: 
+			if p.info == x:
+				break
+			p = p.link
+
+		if p is None:
+			print(x, " is not present in the list.")
+		else: 
+			temp = Node(data)
+			temp.link = p.link
+			p.link = temp
+
 	def insertBefore(self,data,x):
-		pass
+		p = self.start
+
+		if p is None: 
+			print("List is empty.")
+			return
+		# x is in first node, new node is to be inserted before first node. This is like a a trivial but very important case.
+
+		if p.info == x:
+			temp = Node(data)
+			temp.link = p
+			p = temp
+			return
+		# Find reference to predecessor of node containing x
+
+		while p.link is not None:
+			if p.link.info == x:
+				break
+			p = p.link
+		if p.link is None:
+			print(x, " is not present in the list.")
+		else:
+			temp.link = p.link
+			p.link = temp
+
+
 	def insertAtPosition(self,data,k):
-		pass
+		p = self.start
+		if k == 1:
+			temp = Node(data)
+			temp.link = p 
+			p = temp
+			return
+
+		i = 1
+		while i < k -1 and p is not None: #Find a reference to k-1 node
+			p = p.link
+			i += 1
+		if p is None:
+			print("You can insert only upto position", i)
+		else: 
+			temp = Node(data)
+			temp.link = p.link
+			p.link = temp
+
 	def deleteNode(self,x):
 		pass
 	def deleteFirstNode(self):
@@ -138,4 +194,16 @@ while True:
 	elif option == 5:
 		data = int(input("Enter the element to be inserted: "))
 		list.insertAtEnd(data)
+	elif option==6:
+		data=int(input("Enter the element to be inserted: "))
+		x=int(input("Enter the element after which to insert: "))
+		list.insertAfter(data,x)
+	elif option==7:
+		data=int(input("Enter the element to be inserted: "))
+		x=int(input("Enter the element before which to insert: "))
+		list.insertBefore(data,x)
+	elif option==8:
+		data=int(input("Enter the element to be inserted: "))
+		k=int(input("Enter the position at which to insert: "))
+		list.insertAtPosition(data,k)
 
