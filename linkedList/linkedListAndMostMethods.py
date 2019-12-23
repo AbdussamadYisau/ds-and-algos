@@ -123,11 +123,49 @@ class singleLinkedList:
 			p.link = temp
 
 	def deleteNode(self,x):
-		pass
+		# If list is empty
+		if self.start is None:
+			print("List is empty")
+			return
+
+		# Deletion of first node
+
+		if self.start.info == x:
+			self.start = self.start.link
+			return
+
+		# Deletion in between or at end
+
+		p = self.start
+
+		while p.link is not None:
+			if p.link.info == x:
+				break
+			p = p.link
+
+		if p.link is None:
+			print("Element ", x, " not in list.")
+		else:
+			p.link = p.link.link
 	def deleteFirstNode(self):
-		pass
+		if self.start is None:
+			return
+		self.start = self.start.link
 	def deleteLasttNode(self):
-		pass
+		# If the list is empty
+		if self.start is None:
+			return
+        # If the list onlu has one node
+		if self.start.link is None:
+			self.start = None
+			return
+		# Normal case with multiple nodes
+		p = self.start
+
+		while p.link.link is not None:
+			p = p.link
+		p.link = None
+		 
 	def reverseList(self):
 		pass
 	def bubbleSortExdata(self): # By exchanging data
@@ -206,4 +244,11 @@ while True:
 		data=int(input("Enter the element to be inserted: "))
 		k=int(input("Enter the position at which to insert: "))
 		list.insertAtPosition(data,k)
+	elif option==9:
+        list.deleteFirstNode()
+    elif option==10:
+        list.deleteLasttNode()
+    elif option==11:
+        data=int(input("Enter element to be deleted"))
+        list.deleteNode(data)
 
