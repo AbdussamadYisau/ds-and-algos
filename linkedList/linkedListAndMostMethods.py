@@ -41,11 +41,27 @@ class singleLinkedList:
 			return False 
 
 	def insertInBeginning(self,data):
-		pass
+		temp = Node(data)
+		temp.link = self.start
+		self.start = temp
 	def insertAtEnd(self,data):
-		pass
+		temp = Node(data)
+		if self.start is None:
+			self.start = temp
+			return
+		p = self.start
+		while p.link is not None:
+			p = p.link
+		p.link = temp
+
 	def createList(self):
-		pass
+		n = int(input("Enter the number of nodes:  "))
+		if n == 0:
+			return
+		for i in range(n):
+			data = int(input("Enter the element to be inserted: "))
+			self.insertAtEnd(data)
+
 	def insertBefore(self,data,x):
 		pass
 	def insertAtPosition(self,data,k):
@@ -116,11 +132,10 @@ while True:
 	elif option == 3:
 		data = int(input("Enter the element that you want to search for: "))
 		list.search(data)
+	elif option == 4:
+		data = int(input("Enter the element to be inserted: "))
+		list.insertInBeginning(data)
+	elif option == 5:
+		data = int(input("Enter the element to be inserted: "))
+		list.insertAtEnd(data)
 
-
-
-
-
-
-
- 
