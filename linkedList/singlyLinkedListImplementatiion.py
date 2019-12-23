@@ -15,4 +15,6 @@ print(a.value) # Prints the value of variable a.
 
 print(a.nextNode) # Prints the position of the a's next node.
 
+print(b) # Was crosschecking to see if the position of a's next node and that of  tallies, and it does. Whoop
+
 
