@@ -155,7 +155,7 @@ class singleLinkedList:
 		# If the list is empty
 		if self.start is None:
 			return
-        # If the list onlu has one node
+		# If the list onlu has one node
 		if self.start.link is None:
 			self.start = None
 			return
@@ -167,7 +167,16 @@ class singleLinkedList:
 		p.link = None
 		 
 	def reverseList(self):
-		pass
+		prev = None 
+		p = self.start
+
+		while p is not None:
+			next = p.link
+			p.link = prev
+			prev = p
+			p = next
+
+		self.start = prev
 	def bubbleSortExdata(self): # By exchanging data
 		pass
 	def bubbleSortExlinks(self): # By exchanging links
@@ -245,10 +254,12 @@ while True:
 		k=int(input("Enter the position at which to insert: "))
 		list.insertAtPosition(data,k)
 	elif option==9:
-        list.deleteFirstNode()
-    elif option==10:
-        list.deleteLasttNode()
-    elif option==11:
-        data=int(input("Enter element to be deleted"))
-        list.deleteNode(data)
+		list.deleteFirstNode()
+	elif option==10:
+		list.deleteLasttNode()
+	elif option==11:
+		data=int(input("Enter element to be deleted: "))
+		list.deleteNode(data)
+	elif option == 12:
+		list.reverseList()
 
