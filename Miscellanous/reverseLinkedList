@@ -8,15 +8,13 @@
 # Input: 4 -> 3 -> 2 -> 1 -> 0 -> NULL
 # Output: 0 -> 1 -> 2 -> 3 -> 4 -> NULL
 
-class Node:
-	def __init__(self,value):
-		self.info = value # This refers to the actual data in the node
-		self.link = None # This refers to the "link"
+
 
 
 class ListNode(object):
-	def __init__(self):
-		self.start = None
+	def __init__(self, x):
+		self.val = x
+		self.link = None
 	
 	# Function to print the list
 	def printList(self):
@@ -34,7 +32,7 @@ class ListNode(object):
 		# Implement this.
 
 		prev = None
-		p = self.start
+		p = self.val
 
 
 		while p is not None:
@@ -44,7 +42,7 @@ class ListNode(object):
 			prev = p
 			p = next 
 
-		self.start = prev
+		self.val = prev
 
 
 
