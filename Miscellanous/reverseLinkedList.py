@@ -27,7 +27,7 @@ class ListNode(object):
 		print(output)
 
 	# Iterative Solution
-	def reverseIteratively(self, head):
+	def reverseIteratively(self):
 
 		# Implement this.
 
@@ -36,7 +36,7 @@ class ListNode(object):
 
 
 		while p is not None:
-			next = p.link 
+			next = p.link
 			p.next = prev
 
 			prev = p
