@@ -32,7 +32,7 @@ def balanceCheck(expr):
 
 	stack = []
 
-	#Check every parenthesis in string 
+	#Iterate through the string, checking every parenthesis 
 
 	for paren in expr:
 
@@ -51,6 +51,4 @@ def balanceCheck(expr):
 	return len(stack) == 0
 
 print(balanceCheck("[](){([[[]]])}"))
-
-
 
