@@ -28,3 +28,6 @@ print( d.removeFront() + " " + d.removeRear())
 print("The current size of the Deque: ",d.size())
 
 print("It;s empty, yeah?", d.isEmpty())
+
+myDeque.enqueue("hello")
+
