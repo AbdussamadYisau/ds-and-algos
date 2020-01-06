@@ -4,9 +4,9 @@ class Queue(object):
 	def isEmpty(self):
 		return self.items == []
 	def  enqueue(self,item):
-		return (self.items.insert(0,item))
+		return (self.items.append(item))
 	def  dequeue(self):
-		return (self.items.pop())
+		return (self.items.pop(0))
 	def peek(self):
 		return self.items[0]
 	def size(self):
