@@ -7,7 +7,7 @@ def countElements(arr):
     for k,v in count.items():
         if k + 1 in count:
             total += v
-    print(count.items())
+    #print(count.items())
     return total
 
 arr = [1,2,3]
