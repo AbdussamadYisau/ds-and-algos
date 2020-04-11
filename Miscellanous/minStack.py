@@ -25,7 +25,7 @@ class MinStack:
         return self.items[len(self.items) - 1]
 
     def getMin(self) -> int:
-        return self.MinS[-1]
+        return self.minS[-1]
 
 
 # Your MinStack object will be instantiated and called as such:
