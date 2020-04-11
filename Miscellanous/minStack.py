@@ -19,7 +19,8 @@ class MinStack:
         self.items.append(x)
 
     def pop(self) -> None:
-        return self.items.pop()
+        if len(self.items) > 0 and self.items.pop() == self.minS[-1]:
+            return self.minS.pop()
 
     def top(self) -> int:
         return self.items[len(self.items) - 1]
