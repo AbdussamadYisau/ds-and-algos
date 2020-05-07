@@ -22,7 +22,7 @@
 
 def duplicateZeroes(arr):
     #s = 0
-    # d stands for destination
+    # d stands for arr's length
     d = len(arr)
 
     destinationArr = []
