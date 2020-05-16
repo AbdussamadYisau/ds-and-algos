@@ -1,25 +1,25 @@
-# def SubArrayEqualsK(nums,k):
-#     output = 0
-#     cummulativeSum = 0
+def SubArrayEqualsK(nums,k):
+    output = 0
+    cummulativeSum = 0
 
     
-#     for i in range(len(nums)):
-#         cummulativeSum = nums[i]
-#         for j in range(i+1, len(nums)):
-#                        # cummulativeSum = cummulativeSum + nums[i] + nums[j]
-#                        #cummulativeSum = 0
-#             print(cummulativeSum,' ',output )
-#             if (cummulativeSum == k):
-#                     output += 1
-#             cummulativeSum += nums[j]
+    for i in range(len(nums)):
+        cummulativeSum = nums[i]
+        for j in range(i+1, len(nums)):
+                       # cummulativeSum = cummulativeSum + nums[i] + nums[j]
+                       #cummulativeSum = 0
+            print(cummulativeSum,' ',output )
+            if (cummulativeSum == k):
+                    output += 1
+            cummulativeSum += nums[j]
                        
                        
-#     return output
+    return output
                     
     
-# nums = [3,4,7,2,-3,1,4,2]
-# ans = (SubArrayEqualsK(nums, 7))
-# print(ans)
+nums = [3,4,7,2,-3,1,4,2]
+ans = (SubArrayEqualsK(nums, 7))
+print(ans)
 
 # Nick White - SubArray equals K
 
