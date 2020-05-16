@@ -4,10 +4,9 @@ def printAllSubarrays(arr,n):
 	#Consider all sub-arrays starting from i
 	for i in range(0,n):
 		sum = 0 #tracker for sum of elements
-		#consider all sub arrays ending at j
-		j = i
+		
 
-		for j in range(j,n):
+		for j in range(i,n):
 			#Sum of elements so far
 
 			sum += arr[j]
