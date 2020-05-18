@@ -1,18 +1,3 @@
-# def intersect(nums1, nums2):
-    # # ans = []
-    # nums1.sort()
-    # nums2.sort()
-    # # for i in range(len(nums1)):
-    # #     for j in range(len(nums2)):
-    # #         if nums1[i] == nums2[j]:
-    # #             ans.append(nums1[i])
-    # #             nums2.remove(j)
-    # # ans = [x for x in nums1 if x in nums2]   
-    # set1 = set(nums1)
-    # set2 = set(nums2)    
-                
-    # return list(set1 & set2)
-
 def intersect(nums1, nums2):
     i = 0
     j = 0
