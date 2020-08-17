@@ -35,6 +35,6 @@ def twoSum(nums, target):
         else:
             dictionary[nums[i]] = i
             
-nums = [2, 7, 11, 15]
-target = 26
+nums = [2,7,11,15]
+target = 22
 print(twoSum(nums,target))

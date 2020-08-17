@@ -50,5 +50,5 @@ def balanceCheck(expr):
 				return False
 	return len(stack) == 0
 
-print(balanceCheck("[](){([[[]]])}"))
+print(balanceCheck("([)]"))
 
