@@ -6,5 +6,7 @@ def threeSum(nums):
             for k in range(j+1, len(nums)):
                 if nums[i] + nums[j] + nums[k] == 0:
                     return(nums[i], nums[j], nums[k])
+    return("Ko si result")
 
 print(threeSum([-1, -1 , 2, 3, 3, 3]))
+print(threeSum([-3, 3 , 3, 3, 3, 3]))
