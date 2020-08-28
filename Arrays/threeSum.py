@@ -14,32 +14,47 @@ def threeSum(nums):
     return res
 
 # Efficient Solution
-
 def threeSumEfficient(nums):
+    res =[]
     nums.sort()
 
-    res = []
+    arrLength = len(nums)
 
-    print(nums.sort())
+    for i in range(arrLength-2):
 
-    for i in range(len(nums)):
+        if (i>0 and nums[i]==nums[i-1]): 
+            continue
+        left = i+1
+        right = arrLength-1
 
-        #Two-pointer method to find the other characters
+        while left < right:
+            total = nums[i]+nums[left]+nums[right]
 
-        secondNum = i + 1
+            if total < 0:
+                left += 1
 
-        lastNum = len(nums) - 1
+            elif total > 0:
+                right -= 1
 
-        while (secondNum < lastNum):
-            if(nums[i] + nums[secondNum] + nums[lastNum] == 0):
-                res.append([nums[i], nums[secondNum], nums[lastNum]])
-            elif (nums[i] + nums[secondNum] + nums[lastNum] < 0):
-                secondNum += 1
             else:
-                lastNum -= 1
+                res.append([nums[i], nums[left], nums[right]])
+
+                while left<right and nums[left]==nums[left+1]:
+                    left += 1
+                while left<right and nums[right]==nums[right-1]:
+                    right -= 1
+                left += 1
+                right -= 1
+
+            
     return res
+                
+print(threeSumEfficient([-1, 0, 1, 2, -1, -4]))
+
+print("=============================")
+
 
 print(threeSum([-1, 0, 1, 2, -1, -4]))
 print(threeSum([-3, 3 , 3, 3, 3, 3]))
 print("==============================================")
-print(threeSumEfficient([-1, 0, 1, 2, -1, -4]))
+# print(threeSumEfficient([-1, 0, 1, 2, -1, -4]))
