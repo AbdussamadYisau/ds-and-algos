@@ -8,9 +8,9 @@ class Solution:
             if i in myDict:
                 myDict[i] += 1
             else:
-                myDict[i] = 0
+                myDict[i] = 1
         for k in myDict:
-            if myDict[k] == 0:
+            if myDict[k] == 1:
                 return s.find(k)
         return(-1)
         
