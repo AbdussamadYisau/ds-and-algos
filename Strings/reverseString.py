@@ -14,7 +14,7 @@ class Solution():
             
             i += 1
             j -= 1
-        return s #If this is removed, it would be in-place. I included it so that we can see if it does what it is supposed to.
+        return s  #If this is removed, it would be in-place. I included it so that we can see if it does what it is supposed to.
 
 l = Solution()
 print(l.reverseString(["H","e", "l", "l", "o"]))

@@ -10,12 +10,15 @@ class Solution:
         
         while i<j:
             
-            while i < j and L[i] not in vowels:
-                i += 1
+            # while i < j and L[i] not in vowels:
+            #     i += 1
             
-            while i < j and L[j] not in vowels:
+            # while i < j and L[j] not in vowels:
+            #     j -= 1
+            if L[i] not in vowels:
+                i += 1
+            elif L[j] not in vowels:
                 j -= 1
-                
             L[i], L[j] = L[j], L[i]
             
             i += 1
@@ -25,4 +28,4 @@ class Solution:
         
 test = Solution()
 
-print(test.reverseVowels("hello"))
+print(test.reverseVowels("leetcode"))
