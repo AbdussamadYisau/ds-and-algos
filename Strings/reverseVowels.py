@@ -10,11 +10,7 @@ class Solution:
         
         while i<j:
             
-            # while i < j and L[i] not in vowels:
-            #     i += 1
             
-            # while i < j and L[j] not in vowels:
-            #     j -= 1
             if L[i] not in vowels:
                 i += 1
             elif L[j] not in vowels:
