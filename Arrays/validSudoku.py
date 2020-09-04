@@ -18,6 +18,7 @@ class validSudoku:
         for i in range(len(board)):
             hold = []
             for j in range(len(board[0])): 
+                # Only j changes, i is fixed. eg [0][0], [1][0], [2][0] etc
                 hold.append(board[j][i])
             if not self.compareAll(hold):
                 return False
