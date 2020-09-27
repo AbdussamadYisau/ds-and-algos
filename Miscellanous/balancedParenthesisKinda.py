@@ -1,17 +1,5 @@
 '''
-PROBLEM STATEMENT: 
-
-Given a string of opening and closing parentheses, check whether it’s balanced. We have 3 types of parentheses: round brackets: (), 
-square brackets: [],
-and curly brackets: {}.
-Assume that the string doesn’t contain any other character than these, 
-no spaces words or numbers. As a reminder,
-balanced parentheses require every opening parenthesis to be closed in the reverse order opened.
-For example ‘([])’ is balanced but ‘([)]’ is not.
-
-You can assume the input string has no spaces.
-
-Take the Problem Statement in mind, but do it for a x number of parentheses
+https://www.hackerrank.com/challenges/balanced-brackets/problem
 
 '''
 
@@ -63,6 +51,73 @@ def balanceCheckDaddy(arr):
 
 
 print(balanceCheckDaddy(["[{}]", "[{]}"]))
+
+
+# Hackerrank solution
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the isBalanced function below.
+def isBalanced(s):
+
+#Check for even number of brackets
+
+    if len(s)%2 != 0:
+        return "NO"
+
+    # Make a set of opening brackets
+
+    opening = set("([{")
+
+    # Make a set of matching pairs
+
+    matches = set([("(",")"), ("{", "}"), ("[", "]")])
+
+    # Use a list as a stack
+
+    stack = []
+
+    #Iterate through the string, checking every parenthesis 
+
+    for paren in s:
+
+        if paren in opening:
+            stack.append(paren)
+
+        else:
+
+            if len(stack) == 0:
+                return "NO"
+
+            prevExpr = stack.pop()
+
+            if (prevExpr,paren) not in matches:
+                return "NO"
+    if len(stack) == 0:
+        return "YES"
+    else:
+        return "NO"
+
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    t = int(input())
+
+    for t_itr in range(t):
+        s = input()
+
+        result = isBalanced(s)
+
+        fptr.write(result + '\n')
+
+    fptr.close()
+
 
 
 
