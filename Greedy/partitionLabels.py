@@ -3,6 +3,7 @@
 class Solution(object):
     def partitionLabels(self, S):
         last = {value: key for key, value in enumerate(S)}
+        print(last)
         j = anchor = 0
         ans = []
         for i, c in enumerate(S):
@@ -12,3 +13,7 @@ class Solution(object):
                 anchor = i + 1
             
         return ans
+
+test = Solution()
+# print(test.partitionLabels("abbcbcdefegdehijhklij"))
+print(test.partitionLabels("ababcbacadefegdehijhklij"))
