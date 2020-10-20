@@ -20,14 +20,17 @@ class Solution:
         j = 1
         
         while (j<n):
-            # print(nums[i], nums[j])
+
             if (nums[i] != nums[j]):
                 
                 i += 1
+            
             nums[i] = nums[j]
             j += 1
-            
-        return(i+1)
+            # print(j,nums)
+        ans = i + 1
+        # print(nums[:ans])
+        return(ans)
 test = Solution()
 
 print(test.removeDuplicates([0,0,1,1,2,2,3,3,4,4,5,5]))
