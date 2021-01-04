@@ -13,4 +13,4 @@ class Solution:
         return fibArray[-1]
 
 solution = Solution()
-print(solution.fib(100))
+print(solution.fib(5))
