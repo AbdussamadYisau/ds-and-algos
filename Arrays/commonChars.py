@@ -2,17 +2,17 @@
 
 class Solution:
     def commonChars(self, A):
-        commonString= list(A[0])
+        commonList= list(A[0])
         
         for i in A:
             answerString= []
             for j in i:
-                if j in commonString:
+                if j in commonList:
                     answerString.append(j)
-                    commonString.remove(j)
-            commonString = answerString
+                    commonList.remove(j)
+            commonList = answerString
         
-        return commonString
+        return commonList
                 
                 
                 
