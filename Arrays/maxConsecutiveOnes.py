@@ -13,6 +13,8 @@ class Solution:
             else:
                 count = 0
         return maxOnes
+
+        
 # Another method 
 def num_of_ones(list_value):
     count = 0
