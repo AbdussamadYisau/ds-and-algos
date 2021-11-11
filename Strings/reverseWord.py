@@ -37,9 +37,15 @@ def revWord(expr):
         start -= 1
     return out
         
+
+def revWordEasy(s): 
+    s = s.strip()
+
+    listWords = s.split()
+
+    return " ".join([i for i in listWords[::-1] if i!=""])
     
-    
-print(revWord("  hello           guy   man  someting foo      bar   z oo         oz la la           world!  "))
+print(revWord("the      sky is blue"))
     
     
 
